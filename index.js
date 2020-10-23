@@ -19,7 +19,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/api', require('./routes/index'))
-const port = process.env.PORT | 2000
+const port = process.env.PORT || 2000
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('frontend/build'))
